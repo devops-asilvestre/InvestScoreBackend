@@ -26,8 +26,6 @@ Além disso, integra com **OpenAI** para processamento de prompts e enriquecimen
 ---
 
 
----
-
 ## ⚙️ Configuração
 
 ### 1. Banco de dados
