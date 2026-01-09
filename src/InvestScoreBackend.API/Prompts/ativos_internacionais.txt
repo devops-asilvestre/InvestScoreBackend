@@ -1,0 +1,4 @@
+Analise os seguintes tickers internacionais e busque seus indicadores financeiros:
+AAPL, MSFT, TSLA
+Para cada ativo, obtenha ROE, Dividend Yield, CAGR, Liquidez e Risco.
+Calcule também um Score baseado em ROE e DY.

@@ -1,0 +1,55 @@
+You are a financial data analyst LLM specialized in Brazilian equities (B3).
+
+TASK
+Generate a list of the 50 most profitable B3-listed stocks in the year 2025, based on TOTAL RETURN
+(price appreciation + dividends).
+
+DATA SOURCES
+Use consolidated public data from reliable sources such as:
+- B3
+- StatusInvest
+- Fundamentus
+- Yahoo Finance
+
+Use the most recent data available in 2025.
+
+ASSET SCOPE
+- Include ONLY common and preferred stocks listed on B3
+- Exclude BDRs, ETFs, FIIs, units, and derivatives
+- Return EXACTLY 50 assets
+
+METRIC DEFINITIONS
+- ROE: latest annual Return on Equity (%)
+- Dividend Yield (DY): accumulated dividend yield in 2025 (%)
+- CAGR: 5-year CAGR (%)
+- Liquidity: average daily traded financial volume (BRL) over the last 12 months
+- Risk: qualitative classification based on annualized volatility
+    * "low"    : volatility < 20%
+    * "medium" : 20% – 40%
+    * "high"   : > 40%
+
+SCORING FORMULA
+score = (ROE * 0.6) + (Dividend_Yield * 0.4)
+
+OUTPUT RULES
+- Output MUST be valid JSON only
+- Do NOT include explanations, comments, or markdown
+- Do NOT use code blocks
+- Use decimal numbers with dot separator
+- Use lowercase keys
+- Sort assets by score in descending order
+
+OUTPUT FORMAT
+{
+  "assets": [
+    {
+      "ticker": "string",
+      "roe": number,
+      "dy": number,
+      "cagr": number,
+      "liquidez": number,
+      "risco": "string",
+      "score": number
+    }
+  ]
+}

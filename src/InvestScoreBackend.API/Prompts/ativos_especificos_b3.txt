@@ -1,0 +1,22 @@
+Analise os seguintes ativos da B3:
+
+PETR4.SA
+VALE3.SA
+ITUB4.SA
+BBDC4.SA
+
+Para cada ativo, retorne os indicadores financeiros abaixo em JSON puro (sem texto adicional, sem blocos de código):
+
+{
+  "assets": [
+    {
+      "ticker": "string",
+      "roe": "number",
+      "dy": "number",
+      "cagr": "number",
+      "liquidez": "number",
+      "risco": "string",
+      "score": "number"
+    }
+  ]
+}
